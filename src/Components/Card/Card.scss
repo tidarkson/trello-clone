@@ -1,0 +1,14 @@
+@import '../../settings';
+
+div.card-items {
+    background-color: aliceblue;
+    padding: $gap;
+    border-radius: $card-border-radius;
+    box-shadow: 0px 0px rgba(0,0,0, 0.1);
+    cursor:pointer;
+
+    // &:not(:last-child){
+      
+    // }
+    margin-bottom: $gap;
+  }

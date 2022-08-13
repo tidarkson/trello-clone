@@ -1,12 +1,4 @@
-$board-bg-color: rgb(30, 16, 109);
-$navbar-app-bg-color: aqua;
-$navbar-board-bg-color:rgb(24, 110, 110);
-$card-bg-color:aquamarine;
-$gap: 10px;
-$column-header-height: 36px;
-$column-footer-height: 36px;
-$column-border-radius: 5px;
-$card-border-radius :3px;
+@import './settings';
 
 
 body {
@@ -41,85 +33,31 @@ code {
     border-top-right-radius: $card-border-radius;
   }
 
-  .navbar {
-    padding-left: $gap;
-    display: flex;
-    align-items: center;
-
-    &.app{
-      font-size: 1.5rem;
-      background-color: $navbar-app-bg-color;
-      color: black;
-    }
-  
-    &.board {
-      font-size: 1.1rem;
-      background-color: $navbar-board-bg-color;
-    }
-
+  .icon {
+    font-size: 14px;
+    margin-right: 5px;
   }
-
-  .board-columns {
-    display: flex;
-    overflow-x: auto;
-
-    .column{
-      flex: 0 0 auto;
-      width: 300px;
-      height: calc(100%-#{$gap});
-      margin-left: 10px;
-
-      >* {
-        background-color:$card-bg-color ;
-        color: black;
-        padding: 0 8px;
-      }
-
-      ul {
-        list-style-type: none;
-        margin: 0;
-        max-height: calc(100%-#{$column-header-height}-#{$column-footer-height});
-        overflow-y: auto;
-
-        &::-webkit-scrollbar {
-          -webkit-appearance: none;
-        }
-        &::-webkit-scrollbar:vertical {
-          width: 11px;
-        }
-
-        li {
-          background-color: aliceblue;
-          padding: $gap;
-          border-radius: $card-border-radius;
-          box-shadow: 0px 0px rgba(0,0,0, 0.1);
-
-
-          &:not(:last-child){
-            margin-bottom: $gap;
-          }
-        }
-      }
-
-      header {
-        padding-left: 15px;
-        height: $column-header-height;
-        line-height: $column-header-height;
-        font-size: 16px;
-        font-weight: bold;
-        border-top-left-radius: $column-border-radius;
-        border-top-right-radius: $column-border-radius;
-      }
-
-      footer {
-        padding-left: 15px;
-        height: $column-footer-height;
-        line-height: $column-footer-height;
-        border-bottom-left-radius: $column-border-radius;
-        border-bottom-right-radius: $column-border-radius;
-      }
-    }
-      
-  }
-
 }
+
+//SignUp
+
+.errors {
+  color: red;
+  }
+
+  .sign-up-form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: $gap;
+  }
+
+  input {
+    outline: none;
+  }
+
+  button {
+    // color: aliceblue;
+    background: aqua;
+    border: none;
+  }
