@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ConditionalRender from "../SignUp/ConditionalRender"
 
 class SignUp extends Component {
     constructor(props) {
@@ -32,8 +32,7 @@ class SignUp extends Component {
     }
 
     submitForm(e) {
-        console.log("Submitting the form now...");
-        console.log(e)
+        console.log("Submitting the form now...: ", e);
     }
 
     validateUsernameOnBlur = e => {
@@ -48,6 +47,12 @@ class SignUp extends Component {
         const errors = this.state.errors;
         errors.push(this.validateNotEmpty("Password", password));
         this.setState({ password, errors });
+    }
+
+    validateNotEmpty(fieldName, value) {
+        if (value.length <= 0) {
+            return `${fieldName} must be filled out.`;
+        }
     }
 
     validatePasswordConfirmationOnBlur(e) {
@@ -83,11 +88,6 @@ class SignUp extends Component {
         );
     }
 
-    validateNotEmpty(fieldName, value) {
-        if (value.length <= 0) {
-            return `${fieldName} must be filled out.`;
-        }
-    }
 
     render() {
         return (
@@ -95,6 +95,7 @@ class SignUp extends Component {
                 <h1>Create An Account</h1>
                 {this.displayErrors()}
                 {this.displayForm()}
+                <ConditionalRender />
             </div>
         )
     }

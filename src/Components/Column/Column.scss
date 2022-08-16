@@ -34,12 +34,45 @@
   header {
     padding-left: 15px;
     height: $column-header-height;
-    line-height: $column-header-height;
+    // line-height: $column-header-height;
     font-size: 16px;
     font-weight: bold;
     border-top-left-radius: $column-border-radius;
     border-top-right-radius: $column-border-radius;
     cursor: pointer;
+  }
+
+  .column-drag-handle {
+    display: flex;
+    padding-right: 3px;
+    padding-top: 5px;
+    padding-left: 10px;
+
+    .column-title {
+      width: 90%;
+    }
+
+    .column-dropdown {
+      width: 10%;
+
+      .dropdown-toggle {
+        padding: 2px 7px;
+
+        &::after {
+          content: "...";
+          border: none;
+        }
+
+        &:hover {
+          background-color: #091e4214;
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
   }
 
   footer {
@@ -53,6 +86,7 @@
     .footer-action {
       margin-left: 10px;
       cursor: pointer;
+
       &:hover {
         color: #333;
       }
@@ -63,7 +97,6 @@
     transition: transform 0.18s ease;
     transform: rotateZ(5deg);
     font-weight: bold
-
   }
 
   .card-ghost-drop {
@@ -75,5 +108,21 @@
     background-color: rgba(150, 150, 200, 0.1);
     border: 1px dashed #abc;
     margin: 4px;
+  }
+
+  .add-new-card {
+    padding-bottom: 10px;
+    .group-btn {
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+  
+      i {
+        font-size: 30px;
+        padding-left: 10px;
+        cursor: pointer;
+        color: #b3b3b3;
+      }
+    }
   }
 }

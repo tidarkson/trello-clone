@@ -61,3 +61,14 @@ code {
     background: aqua;
     border: none;
   }
+
+  .customize-input-column {
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    background-color: inherit;
+    cursor: pointer;
+    border: none !important;
+  }

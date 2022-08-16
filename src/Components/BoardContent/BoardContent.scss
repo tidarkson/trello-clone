@@ -16,7 +16,7 @@
 
 .add-new-column {
   width: 250px;
-  height: 32px;
+  height: 40px;
   line-height: 32px;
   padding: 4px 0 4px 15px;
   cursor: pointer;
@@ -30,3 +30,27 @@
     background-color: hsla(0, 0, 100, .34);
   }
 }
+
+.content-add-column {
+  padding: 5px;
+  margin-left:10px;
+  background-color: hsla(0, 0, 100, .34);
+  border-radius: $card-border-radius;
+  width: 250px;
+
+
+  .group-btn {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 30px;
+      padding-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+}
+
+
